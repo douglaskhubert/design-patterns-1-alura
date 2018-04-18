@@ -14,5 +14,10 @@
     // echo $calculadora->realizaCalculo($reforma, $iccc);
 
 
-    $calculador = new CalculadorDeDescontos;
-    $orcamento = new Orcamento(500.0);
+    $calculador = new CalculadorDeDesconto;
+    $orcamento = new Orcamento(450.0);
+    $orcamento->addItem(new Item("CANETA", 250.0));
+    $orcamento->addItem(new Item("LAPIS", 200.0));
+
+    $desconto = $calculador->calcula($orcamento);
+    echo $desconto;

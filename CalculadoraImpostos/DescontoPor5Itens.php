@@ -7,7 +7,7 @@ class DescontoPor5Itens implements IDesconto
     
     public function desconta(Orcamento $orcamento)
     {
-        if (count($orcamento->getItens()) > 5) {
+        if (count($orcamento->getItens()) >= 5) {
             return $orcamento->getValor() * 0.1;
         }
         else {

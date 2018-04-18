@@ -1,9 +1,10 @@
 <?php
-    class Calculadora
+
+
+class Calculadora
+{
+    public function realizaCalculo(Orcamento $orcamento, Imposto $imposto)
     {
-        public function realizaCalculo(Orcamento $orcamento, Imposto $imposto)
-        {
-            return $imposto->calcula($orcamento);
-        }
+        return $imposto->calcula($orcamento);
     }
-?>
+}
